@@ -1,7 +1,7 @@
 Feature: As a librarian, I want to create a new user using add_user endpoint so that I can add new users to the
   system.
 
-
+  @smoke
   Scenario: Create a new user API
     Given I logged Library api as a "librarian"
     And Accept header is "application/json"
@@ -13,7 +13,7 @@ Feature: As a librarian, I want to create a new user using add_user endpoint so 
     And the field value for "message" path should be equal to "The user has been created."
     And "user_id" field should not be null
 
-
+  @smoke
   Scenario: Create a new user ALL LAYERS
     Given I logged Library api as a "librarian"
     And Accept header is "application/json"
